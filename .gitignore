@@ -104,3 +104,4 @@ dist
 .tern-port
 
 pattern_exports
+public/
