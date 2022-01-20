@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html class="{{ htmlClass }}" lang="en">
-  <head>
+
+<head>
     <title>{{ title }}</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" />
 
-    <link rel="stylesheet" href="../../css/vendor/zurb_foundation/css/foundation-float.css">
+    {# <link rel="stylesheet" href="../../css/vendor/zurb_foundation/css/foundation-float.css">
+    <link rel="stylesheet" href="../../css/vendor/zurb_foundation/css/foundation-flex.css"> #}
+    <link rel="stylesheet" href="../../css/vendor/zurb_foundation/css/foundation-prototype.css">
+
     <link rel="stylesheet" href="../../css/vendor/zurb_foundation/css/motion-ui.css">
     <link rel="stylesheet" href="../../css/vendor/zurb_foundation/css/zurb_foundation.css">
+    <link rel="stylesheet" href="../../css/vendor/foundation-icons/foundation-icons.css">
 
     <link rel="stylesheet" href="../../css/style.css?{{ cacheBuster }}" media="all" />
     <link rel="stylesheet" href="../../css/pattern-scaffolding.css?{{ cacheBuster }}" media="all" />
@@ -18,12 +23,12 @@
     <!-- End Pattern Lab -->
 
     <style>
-      .pl-c-tabs__panel code[class*=language-] {
-        border: none;
-        background: transparent;
-      }
+        .pl-c-tabs__panel code[class*=language-] {
+            border: none;
+            background: transparent;
+        }
     </style>
 
-  </head>
-  <body class="{{ bodyClass }}">
+</head>
 
+<body class="{{ bodyClass }}">

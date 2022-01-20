@@ -1,39 +1,43 @@
 <!DOCTYPE html>
 <html class="pl" lang="en">
-  <head>
+
+<head>
     <title>Pattern Lab</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" />
 
-    <link rel="stylesheet" href="../../css/vendor/zurb_foundation/css/foundation-float.css">
+        <link rel="stylesheet" href="../../css/vendor/zurb_foundation/css/foundation-prototype.css">
+
     <link rel="stylesheet" href="../../css/vendor/zurb_foundation/css/motion-ui.css">
     <link rel="stylesheet" href="../../css/vendor/zurb_foundation/css/zurb_foundation.css">
+    <link rel="stylesheet" href="../../css/vendor/foundation-icons/foundation-icons.css">
 
-    <link rel="stylesheet" href="../../css/style.css?1642399434805" media="all" />
-    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1642399434805" media="all" />
+    <link rel="stylesheet" href="../../css/style.css?1642643486872" media="all" />
+    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1642643486872" media="all" />
 
     <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
-    <link rel="stylesheet" href="../../styleguide/css/pattern-lab.css?1642399434805" media="all">
+    <link rel="stylesheet" href="../../styleguide/css/pattern-lab.css?1642643486872" media="all">
         <!-- End Pattern Lab -->
 
     <style>
-      .pl-c-tabs__panel code[class*=language-] {
-        border: none;
-        background: transparent;
-      }
+        .pl-c-tabs__panel code[class*=language-] {
+            border: none;
+            background: transparent;
+        }
     </style>
 
-  </head>
-  <body class="body"><!-- View All Patterns in a Pattern Sub-Type -->
+</head>
+
+<body class="body"><!-- View All Patterns in a Pattern Sub-Type -->
 <div class="pl-c-main">
 
 	<!-- Index of Patterns -->
 	<div class="pl-c-pattern-index">
 
-		<div id="viewall-atoms-navigation" class="pl-c-category">
+		<div id="viewall-atoms-general" class="pl-c-category">
 				
 			<h2 class="pl-c-category__title">
-				<a href="../../patterns/atoms-navigation&#x2F;index.html" class="pl-c-category__title-link patternLink" data-patternpartial="viewall-atoms-navigation">Navigation</a>
+				<a href="../../patterns/atoms-general&#x2F;index.html" class="pl-c-category__title-link patternLink" data-patternpartial="viewall-atoms-general">General</a>
 			</h2><!--end pl-c-category__title-->
 		
 			<div class="pl-c-category__description pl-c-text-passage">
@@ -41,21 +45,21 @@
 			</div><!--end pl-c-category__description-->
 			
 		</div><!--end pl-c-category-->
-					<div id="atoms-topbar" class="pl-c-pattern">
+					<div id="atoms-XY_Grid" class="pl-c-pattern">
 		
 			<div class="pl-c-pattern__header">
 		
 				<h3 class="pl-c-pattern__title">
 		
-					<a href="../../patterns/atoms-navigation-topbar&#x2F;atoms-navigation-topbar.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="atoms-topbar" title="Link to Pattern">
-						Topbar
+					<a href="../../patterns/atoms-general-XY_Grid&#x2F;atoms-general-XY_Grid.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="atoms-XY_Grid" title="Link to Pattern">
+						XY Grid
 		
 		
 					</a><!--end pl-c-pattern__title-link-->
 		
 				</h3><!--end pl-c-pattern__title-->
 		
-				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-atoms-topbar" data-patternpartial="atoms-topbar" title="View Pattern Info">
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-atoms-XY_Grid" data-patternpartial="atoms-XY_Grid" title="View Pattern Info">
 					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
 					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
 					<div class="pl-c-pattern__toggle-icon-wrapper" aria-hidden="true">
@@ -74,95 +78,159 @@
 		
 			</div><!--end pl-c-pattern__header-->
 		
-			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-atoms-topbar">
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-atoms-XY_Grid">
 		    </div><!--end pl-c-pattern__extra-->
 		
 			<div class="pl-js-pattern-example">
-			<div class="top-bar">
-  <div class="top-bar-left">
-    <ul class="dropdown menu" data-dropdown-menu>
-      <li class="menu-text">Site Title</li>
-      <li>
-        <a href="#">One</a>
-        <ul class="menu vertical">
-          <li><a href="#">One</a></li>
-          <li><a href="#">Two</a></li>
-          <li><a href="#">Three</a></li>
-        </ul>
-      </li>
-      <li><a href="#">Two</a></li>
-      <li><a href="#">Three</a></li>
-    </ul>
-  </div>
-  <div class="top-bar-right">
-    <ul class="menu">
-      <li><input type="search" placeholder="Search"></li>
-      <li><button type="button" class="button">Search</button></li>
-    </ul>
-  </div>
+			<style>
+    .show-outline div {
+        outline: 1px solid #6ed2ff;
+        background: #eaf9ff;
+        padding: 10px;
+    }
+</style>
+<div class="show-outline">
+    <h5>basics</h5>
+    <p>size: small, medium, large</p>
+
+    <div class="grid-x">
+        <div class="cell">full width cell</div>
+        <div class="cell">full width cell</div>
+    </div>
+    <div class="grid-x">
+        <div class="cell small-6">6 cells</div>
+        <div class="cell small-6">6 cells</div>
+    </div>
+    <div class="grid-x">
+        <div class="cell medium-6 large-4">12/6/4 cells</div>
+        <div class="cell medium-6 large-8">12/6/8 cells</div>
+    </div>
+
+    <h5>Gutters</h5>
+    <div class="grid-x grid-margin-x">
+        <div class="cell medium-6 large-4">12/6/4 cells</div>
+        <div class="cell medium-6 large-8">12/6/8 cells</div>
+    </div>
+    <div class="grid-x grid-padding-x">
+        <div class="cell medium-6 large-4">12/6/4 cells</div>
+        <div class="cell medium-6 large-8">12/6/8 cells</div>
+    </div>
+
+    <h5>Grid Container</h5>
+    <div class="grid-container">
+        <div class="grid-x grid-margin-x">
+            <div class="cell small-4">cell</div>
+            <div class="cell small-4">cell</div>
+            <div class="cell small-4">cell</div>
+        </div>
+    </div>
+
+    <h5>Grid Container Fluid</h5>
+
+    <div class="grid-container fluid">
+        <div class="grid-x grid-margin-x">
+            <div class="cell small-4">cell</div>
+            <div class="cell small-4">cell</div>
+            <div class="cell small-4">cell</div>
+        </div>
+    </div>
+
+    <h5>Grid Container Full</h5>
+    <div class="grid-container full">
+        <div class="grid-x grid-margin-x">
+            <div class="cell small-4">cell</div>
+            <div class="cell small-4">cell</div>
+            <div class="cell small-4">cell</div>
+        </div>
+    </div>
+
+    <h5>Auto Sizing</h5>
+    <p>如果将类.auto或.[size]-auto添加到单元格中，它将占用剩余空间。</p>
+    <div class="grid-x grid-margin-x">
+        <div class="cell small-4">4 cells</div>
+        <div class="cell auto">Whatever's left!</div>
+    </div>
+
+    <div class="grid-x grid-margin-x">
+        <div class="cell small-2">4 cells</div>
+        <div class="cell auto">Whatever's left!</div>
+        <div class="cell auto">Whatever's left!</div>
+    </div>
+
+    <p>A cell can also be made to shrink, by adding the .shrink or .[size]-shrink class. This means it will only take up
+        the space its contents need.</p>
+
+    <div class="grid-x grid-margin-x">
+        <div class="cell medium-shrink">Shrink!</div>
+        <div class="cell auto">Expand!</div>
+    </div>
+
+    <h5>响应式调整</h5>
+    <div class="grid-x">
+        <div class="cell large-auto">One</div>
+        <div class="cell large-auto">Two</div>
+        <div class="cell large-auto">Three</div>
+        <div class="cell large-auto">Four</div>
+        <div class="cell large-auto">Five</div>
+        <div class="cell large-auto">Six</div>
+    </div>
+
+    <h5>折叠单元格</h5>
+    <div class="grid-x grid-margin-x medium-margin-collapse">
+        <div class="cell small-6">
+            Gutters at small no gutters at medium.
+        </div>
+        <div class="cell small-6">
+            Gutters at small no gutters at medium.
+        </div>
+    </div>
+
+    <h5>偏移量</h5>
+    <div class="grid-x grid-margin-x">
+        <div class="cell small-4 large-offset-2">Offset 2 on large</div>
+        <div class="cell small-4">4 cells</div>
+    </div>
+
+    <h5>块网格</h5>
+    <p>small-up-2 medium-up-4 large-up-6 :</p>
+    <p>分别表示 在 small 下 一行2个</p>
+    <p>分别表示 在 medium 下 一行4个</p>
+    <p>分别表示 在 large 下 一行6个</p>
+    <div class="grid-x grid-padding-x small-up-2 medium-up-4 large-up-6">
+        <div class="cell">cell</div>
+        <div class="cell">cell</div>
+        <div class="cell">cell</div>
+        <div class="cell">cell</div>
+        <div class="cell">cell</div>
+        <div class="cell">cell</div>
+    </div>
+
+    <h5>语义构建</h5>
+    ......
+    <p>XY 网格 CSS 是使用一组强大的 Sass mixin 生成的，您可以在自己的代码中使用它们来构建语义网格。</p>
+
+    <h5>网格容器</h5>
+    <code>
+        .container {
+            @include xy-grid-container;
+          }
+
+    </code>
+
+    <h5>网格</h5>
+    <code>
+        .my-grid {
+            @include xy-grid;
+          }
+
+    </code>
+    <h5>自定义块网格</h5>
+
 </div>
 			</div><!--end pl-js-pattern-example-->
 		
-			<script type="text/json" id="pl-pattern-data-atoms-topbar" class="pl-js-pattern-data">
-			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"atoms","patternSubgroup":"navigation"},"patternExtension":"twig","patternName":"Topbar","patternPartial":"atoms-topbar","patternState":"","patternEngineName":"twig-php","extraOutput":{}}
-			</script>
-		
-		</div><!--end pl-c-pattern-->		<div id="viewall-atoms-buttons" class="pl-c-category">
-				
-			<h2 class="pl-c-category__title">
-				<a href="../../patterns/atoms-buttons&#x2F;index.html" class="pl-c-category__title-link patternLink" data-patternpartial="viewall-atoms-buttons">Buttons</a>
-			</h2><!--end pl-c-category__title-->
-		
-			<div class="pl-c-category__description pl-c-text-passage">
-				
-			</div><!--end pl-c-category__description-->
-			
-		</div><!--end pl-c-category-->
-					<div id="atoms-buttons" class="pl-c-pattern">
-		
-			<div class="pl-c-pattern__header">
-		
-				<h3 class="pl-c-pattern__title">
-		
-					<a href="../../patterns/atoms-buttons-buttons&#x2F;atoms-buttons-buttons.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="atoms-buttons" title="Link to Pattern">
-						Buttons
-		
-		
-					</a><!--end pl-c-pattern__title-link-->
-		
-				</h3><!--end pl-c-pattern__title-->
-		
-				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-atoms-buttons" data-patternpartial="atoms-buttons" title="View Pattern Info">
-					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
-					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
-					<div class="pl-c-pattern__toggle-icon-wrapper" aria-hidden="true">
-						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
-							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
-							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
-						</svg>
-		
-						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
-							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
-							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
-							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
-						</svg>
-					</div>
-				</button>
-		
-			</div><!--end pl-c-pattern__header-->
-		
-			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-atoms-buttons">
-		    </div><!--end pl-c-pattern__extra-->
-		
-			<div class="pl-js-pattern-example">
-			<a href="about.html" class="button">Learn More666666</a>
-<a href="#features" class="button">View All Features</a>
-<button class="submit success button">Save</button>
-<button type="button" class="alert button">Delete</button>
-			</div><!--end pl-js-pattern-example-->
-		
-			<script type="text/json" id="pl-pattern-data-atoms-buttons" class="pl-js-pattern-data">
-			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"atoms","patternSubgroup":"buttons"},"patternExtension":"twig","patternName":"Buttons","patternPartial":"atoms-buttons","patternState":"","patternEngineName":"twig-php","extraOutput":{"order":0}}
+			<script type="text/json" id="pl-pattern-data-atoms-XY_Grid" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"atoms","patternSubgroup":"general"},"patternExtension":"twig","patternName":"XY Grid","patternPartial":"atoms-XY_Grid","patternState":"","patternEngineName":"twig-php","extraOutput":{"order":0}}
 			</script>
 		
 		</div><!--end pl-c-pattern-->		<div id="viewall-atoms-global" class="pl-c-category">
@@ -404,6 +472,543 @@
 		
 			<script type="text/json" id="pl-pattern-data-atoms-visibility" class="pl-js-pattern-data">
 			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"atoms","patternSubgroup":"global"},"patternExtension":"twig","patternName":"Visibility","patternPartial":"atoms-visibility","patternState":"","patternEngineName":"twig-php","extraOutput":{"order":3}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->		<div id="viewall-atoms-buttons" class="pl-c-category">
+				
+			<h2 class="pl-c-category__title">
+				<a href="../../patterns/atoms-buttons&#x2F;index.html" class="pl-c-category__title-link patternLink" data-patternpartial="viewall-atoms-buttons">Buttons</a>
+			</h2><!--end pl-c-category__title-->
+		
+			<div class="pl-c-category__description pl-c-text-passage">
+				
+			</div><!--end pl-c-category__description-->
+			
+		</div><!--end pl-c-category-->
+					<div id="atoms-1basics" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/atoms-buttons-1basics&#x2F;atoms-buttons-1basics.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="atoms-1basics" title="Link to Pattern">
+						1 Basics
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-atoms-1basics" data-patternpartial="atoms-1basics" title="View Pattern Info">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+					<div class="pl-c-pattern__toggle-icon-wrapper" aria-hidden="true">
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+					</div>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-atoms-1basics">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<!-- Anchors (links) -->
+<a href="about.html" class="button">Learn More</a>
+<a href="#features" class="button">View All Features</a>
+
+<!-- Buttons (actions) -->
+<button class="submit success button">Save</button>
+<button type="button" class="alert button">Delete</button>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-atoms-1basics" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"atoms","patternSubgroup":"buttons"},"patternExtension":"twig","patternName":"1 Basics","patternPartial":"atoms-1basics","patternState":"","patternEngineName":"twig-php","extraOutput":{"order":0}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->		<div id="atoms-2sizing" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/atoms-buttons-2sizing&#x2F;atoms-buttons-2sizing.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="atoms-2sizing" title="Link to Pattern">
+						2 Sizing
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-atoms-2sizing" data-patternpartial="atoms-2sizing" title="View Pattern Info">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+					<div class="pl-c-pattern__toggle-icon-wrapper" aria-hidden="true">
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+					</div>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-atoms-2sizing">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<a class="button tiny" href="#">So Tiny</a>
+<a class="button small" href="#">So Small</a>
+<a class="button" href="#">So Basic</a>
+<a class="button large" href="#">So Large</a>
+<a class="button expanded" href="#">Such Expand</a>
+<a class="button small expanded" href="#">Wow, Small Expand</a>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-atoms-2sizing" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"atoms","patternSubgroup":"buttons"},"patternExtension":"twig","patternName":"2 Sizing","patternPartial":"atoms-2sizing","patternState":"","patternEngineName":"twig-php","extraOutput":{"order":2}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->		<div id="atoms-3Responsive Expanded buttons" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/atoms-buttons-3Responsive Expanded buttons&#x2F;atoms-buttons-3Responsive Expanded buttons.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="atoms-3Responsive Expanded buttons" title="Link to Pattern">
+						3 Responsive Expanded Buttons
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-atoms-3Responsive Expanded buttons" data-patternpartial="atoms-3Responsive Expanded buttons" title="View Pattern Info">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+					<div class="pl-c-pattern__toggle-icon-wrapper" aria-hidden="true">
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+					</div>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-atoms-3Responsive Expanded buttons">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<style>
+        @media screen and (max-width: 39.9375em) {
+            .button.small-only-expanded {
+                display: block;
+                width: 100%;
+                margin-right: 0;
+                margin-left: 0;
+            }
+        }
+
+        @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+            .button.medium-only-expanded {
+                display: block;
+                width: 100%;
+                margin-right: 0;
+                margin-left: 0;
+            }
+        }
+
+        @media screen and (max-width: 63.9375em) {
+            .button.medium-down-expanded {
+                display: block;
+                width: 100%;
+                margin-right: 0;
+                margin-left: 0;
+            }
+        }
+
+        @media print,
+        screen and (min-width: 40em) {
+            .button.medium-expanded {
+                display: block;
+                width: 100%;
+                margin-right: 0;
+                margin-left: 0;
+            }
+        }
+
+        @media screen and (min-width: 64em) and (max-width: 74.9375em) {
+            .button.large-only-expanded {
+                display: block;
+                width: 100%;
+                margin-right: 0;
+                margin-left: 0;
+            }
+        }
+
+        @media screen and (max-width: 74.9375em) {
+            .button.large-down-expanded {
+                display: block;
+                width: 100%;
+                margin-right: 0;
+                margin-left: 0;
+            }
+        }
+
+        @media print,
+        screen and (min-width: 64em) {
+            .button.large-expanded {
+                display: block;
+                width: 100%;
+                margin-right: 0;
+                margin-left: 0;
+            }
+        }
+    </style>
+<a class="button small small-only-expanded" href="#">Wow, Expand only on small viewport</a>
+<a class="button small medium-only-expanded" href="#">Expand only on medium viewport</a>
+<a class="button small large-only-expanded" href="#">Expand only on large viewport</a>
+
+<a class="button small medium-expanded" href="#">Wow, Expand on medium and larger</a>
+<a class="button small large-expanded" href="#">Expand on large and larger</a>
+
+<a class="button small medium-down-expanded" href="#">Expand on medium and smaller</a>
+<a class="button small large-down-expanded" href="#">Expand on large and smaller</a>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-atoms-3Responsive Expanded buttons" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"atoms","patternSubgroup":"buttons"},"patternExtension":"twig","patternName":"3 Responsive Expanded Buttons","patternPartial":"atoms-3Responsive Expanded buttons","patternState":"","patternEngineName":"twig-php","extraOutput":{"order":3}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->		<div id="atoms-4Coloring" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/atoms-buttons-4Coloring&#x2F;atoms-buttons-4Coloring.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="atoms-4Coloring" title="Link to Pattern">
+						4 Coloring
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-atoms-4Coloring" data-patternpartial="atoms-4Coloring" title="View Pattern Info">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+					<div class="pl-c-pattern__toggle-icon-wrapper" aria-hidden="true">
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+					</div>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-atoms-4Coloring">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<a class="button primary" href="#">Primary</a>
+<a class="button secondary" href="#">Secondary</a>
+<a class="button success" href="#">Success</a>
+<a class="button alert" href="#">Alert</a>
+<a class="button warning" href="#">Warning</a>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-atoms-4Coloring" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"atoms","patternSubgroup":"buttons"},"patternExtension":"twig","patternName":"4 Coloring","patternPartial":"atoms-4Coloring","patternState":"","patternEngineName":"twig-php","extraOutput":{"order":4}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->		<div id="atoms-5Hollow Style" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/atoms-buttons-5Hollow Style&#x2F;atoms-buttons-5Hollow Style.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="atoms-5Hollow Style" title="Link to Pattern">
+						5 Hollow Style
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-atoms-5Hollow Style" data-patternpartial="atoms-5Hollow Style" title="View Pattern Info">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+					<div class="pl-c-pattern__toggle-icon-wrapper" aria-hidden="true">
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+					</div>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-atoms-5Hollow Style">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<button class="hollow button" href="#">Primary</button>
+<button class="hollow button secondary" href="#">Secondary</button>
+<button class="hollow button success" href="#">Success</button>
+<button class="hollow button alert" href="#">Alert</button>
+<button class="hollow button warning" href="#">Warning</button>
+<button class="hollow button" href="#" disabled>Disabled</button>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-atoms-5Hollow Style" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"atoms","patternSubgroup":"buttons"},"patternExtension":"twig","patternName":"5 Hollow Style","patternPartial":"atoms-5Hollow Style","patternState":"","patternEngineName":"twig-php","extraOutput":{"order":5}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->		<div id="atoms-6 Disabled Buttons" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/atoms-buttons-6 Disabled Buttons&#x2F;atoms-buttons-6 Disabled Buttons.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="atoms-6 Disabled Buttons" title="Link to Pattern">
+						6 Disabled Buttons
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-atoms-6 Disabled Buttons" data-patternpartial="atoms-6 Disabled Buttons" title="View Pattern Info">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+					<div class="pl-c-pattern__toggle-icon-wrapper" aria-hidden="true">
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+					</div>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-atoms-6 Disabled Buttons">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<a class="button disabled" href="#" aria-disabled>Disabled</a>
+<button type="button" class="button primary" disabled>Disabled</button>
+<button type="button" class="button secondary" disabled>Disabled</button>
+<button type="button" class="button success" disabled>Disabled</button>
+<button type="button" class="button alert" disabled>Disabled</button>
+<button type="button" class="button warning" disabled>Disabled</button>
+
+<p>
+    <a class="button hollow disabled" href="#" aria-disabled>Disabled</a>
+<button type="button" class="button hollow primary" disabled>Disabled</button>
+<button type="button" class="button hollow secondary" disabled>Disabled</button>
+<button type="button" class="button hollow success" disabled>Disabled</button>
+<button type="button" class="button hollow alert" disabled>Disabled</button>
+<button type="button" class="button hollow warning" disabled>Disabled</button>
+</p>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-atoms-6 Disabled Buttons" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"atoms","patternSubgroup":"buttons"},"patternExtension":"twig","patternName":"6 Disabled Buttons","patternPartial":"atoms-6 Disabled Buttons","patternState":"","patternEngineName":"twig-php","extraOutput":{"order":6}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->		<div id="atoms-7 Clear Style" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/atoms-buttons-7 Clear Style&#x2F;atoms-buttons-7 Clear Style.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="atoms-7 Clear Style" title="Link to Pattern">
+						7 Clear Style
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-atoms-7 Clear Style" data-patternpartial="atoms-7 Clear Style" title="View Pattern Info">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+					<div class="pl-c-pattern__toggle-icon-wrapper" aria-hidden="true">
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+					</div>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-atoms-7 Clear Style">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<a class="clear button" href="#">Primary</a>
+<a class="clear button secondary" href="#">Secondary</a>
+<a class="clear button success" href="#">Success</a>
+<a class="clear button alert" href="#">Alert</a>
+<a class="clear button warning" href="#">Warning</a>
+<a class="clear button" href="#" disabled>Disabled</a>
+
+<p>
+    <button class="button primary" href="#">Primary Action</button>
+    <button class="clear button" href="#">Secondary Action</button>
+</p>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-atoms-7 Clear Style" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"atoms","patternSubgroup":"buttons"},"patternExtension":"twig","patternName":"7 Clear Style","patternPartial":"atoms-7 Clear Style","patternState":"","patternEngineName":"twig-php","extraOutput":{"order":7}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->		<div id="atoms-8Dropdown Arrows" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/atoms-buttons-8Dropdown Arrows&#x2F;atoms-buttons-8Dropdown Arrows.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="atoms-8Dropdown Arrows" title="Link to Pattern">
+						8 Dropdown Arrows
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-atoms-8Dropdown Arrows" data-patternpartial="atoms-8Dropdown Arrows" title="View Pattern Info">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+					<div class="pl-c-pattern__toggle-icon-wrapper" aria-hidden="true">
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+					</div>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-atoms-8Dropdown Arrows">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<button class="dropdown button tiny">Dropdown Button</button>
+<button class="dropdown button small">Dropdown Button</button>
+<button class="dropdown button">Dropdown Button</button>
+<button class="dropdown button large">Dropdown Button</button>
+<button class="dropdown button expanded">Dropdown Button</button>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-atoms-8Dropdown Arrows" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"atoms","patternSubgroup":"buttons"},"patternExtension":"twig","patternName":"8 Dropdown Arrows","patternPartial":"atoms-8Dropdown Arrows","patternState":"","patternEngineName":"twig-php","extraOutput":{"order":8}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->		<div id="atoms-9Accessibility" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/atoms-buttons-9Accessibility&#x2F;atoms-buttons-9Accessibility.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="atoms-9Accessibility" title="Link to Pattern">
+						9 Accessibility
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-atoms-9Accessibility" data-patternpartial="atoms-9Accessibility" title="View Pattern Info">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+					<div class="pl-c-pattern__toggle-icon-wrapper" aria-hidden="true">
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+					</div>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-atoms-9Accessibility">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<p>
+    icon needs include https://zurb.com/playground/foundation-icon-fonts-3
+</p>
+<button class="button" type="button">
+    <!-- Screen readers will see "close" -->
+    <span class="show-for-sr">Close</span>
+    <!-- Visual users will see the X, but not the "Close" text -->
+    <span aria-hidden="true"><i class="fi-x"></i></span>
+</button>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-atoms-9Accessibility" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"atoms","patternSubgroup":"buttons"},"patternExtension":"twig","patternName":"9 Accessibility","patternPartial":"atoms-9Accessibility","patternState":"","patternEngineName":"twig-php","extraOutput":{"order":9}}
 			</script>
 		
 		</div><!--end pl-c-pattern-->		<div id="viewall-atoms-text" class="pl-c-category">
@@ -1746,6 +2351,83 @@ p q r s t u v w x y z { | } ~
 			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"atoms","patternSubgroup":"tables"},"patternExtension":"twig","patternName":"Table","patternPartial":"atoms-table","patternState":"","patternEngineName":"twig-php","extraOutput":{"order":0}}
 			</script>
 		
+		</div><!--end pl-c-pattern-->		<div id="viewall-atoms-navigation" class="pl-c-category">
+				
+			<h2 class="pl-c-category__title">
+				<a href="../../patterns/atoms-navigation&#x2F;index.html" class="pl-c-category__title-link patternLink" data-patternpartial="viewall-atoms-navigation">Navigation</a>
+			</h2><!--end pl-c-category__title-->
+		
+			<div class="pl-c-category__description pl-c-text-passage">
+				
+			</div><!--end pl-c-category__description-->
+			
+		</div><!--end pl-c-category-->
+					<div id="atoms-topbar" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/atoms-navigation-topbar&#x2F;atoms-navigation-topbar.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="atoms-topbar" title="Link to Pattern">
+						Topbar
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-atoms-topbar" data-patternpartial="atoms-topbar" title="View Pattern Info">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+					<div class="pl-c-pattern__toggle-icon-wrapper" aria-hidden="true">
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+					</div>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-atoms-topbar">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<div class="top-bar">
+  <div class="top-bar-left">
+    <ul class="dropdown menu" data-dropdown-menu>
+      <li class="menu-text">Site Title</li>
+      <li>
+        <a href="#">One</a>
+        <ul class="menu vertical">
+          <li><a href="#">One</a></li>
+          <li><a href="#">Two</a></li>
+          <li><a href="#">Three</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Two</a></li>
+      <li><a href="#">Three</a></li>
+    </ul>
+  </div>
+  <div class="top-bar-right">
+    <ul class="menu">
+      <li><input type="search" placeholder="Search"></li>
+      <li><button type="button" class="button">Search</button></li>
+    </ul>
+  </div>
+</div>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-atoms-topbar" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"atoms","patternSubgroup":"navigation"},"patternExtension":"twig","patternName":"Topbar","patternPartial":"atoms-topbar","patternState":"","patternEngineName":"twig-php","extraOutput":{}}
+			</script>
+		
 		</div><!--end pl-c-pattern-->
 	</div>
 	<!--end pl-c-pattern-index-->
@@ -1801,10 +2483,10 @@ p q r s t u v w x y z { | } ~
   }
 </script>
 
-<script id="pl-js-polyfill-insert-1642399434805">
+<script id="pl-js-polyfill-insert-1642643486872">
   (function() {
     if (self != top) {
-      var cb = '1642399434805';
+      var cb = '1642643486872';
       var js = [];
       scriptLoader.run(js,cb,'pl-js-polyfill-insert');
     }
@@ -1817,7 +2499,7 @@ p q r s t u v w x y z { | } ~
   import('../../styleguide/js/patternlab-pattern.modern.js');
 </script>
 
-<script id="pl-js-insert-1642399434805" nomodule>
+<script id="pl-js-insert-1642643486872" nomodule>
   /*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on http://goo.gl/REQGQ by Paul Irish). Licensed MIT */
   !function(e){var t=function(t,n){"use strict";var o=e.document.getElementsByTagName("script")[0],r=e.document.createElement("script");return r.src=t,r.async=!0,o.parentNode.insertBefore(r,o),n&&"function"==typeof n&&(r.onload=n),r};"undefined"!=typeof module?module.exports=t:e.loadJS=t}("undefined"!=typeof global?global:this);
 
