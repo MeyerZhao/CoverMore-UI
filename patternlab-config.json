@@ -79,8 +79,8 @@
     "complete"
   ],
   "patternExportAll": false,
-  "patternExportDirectory": "pattern_exports",
-  "patternExportPatternPartials": [],
+  "patternExportDirectory": "./pattern_exports/",
+  "patternExportPatternPartials": ["templates-homepage"],
   "patternExportPreserveDirectoryStructure": true,
   "patternExportRaw": false,
   "patternMergeVariantArrays": true,
@@ -96,20 +96,17 @@
     "layout": "horizontal",
     "noViewAll": false
   },
-  "uikits": [
-    {
-      "name": "uikit-workshop",
-      "package": "@pattern-lab/uikit-workshop",
-      "outputDir": "",
-      "enabled": true,
-      "excludedPatternStates": [],
-      "excludedTags": []
-    }
-  ],
+  "uikits": [{
+    "name": "uikit-workshop",
+    "package": "@pattern-lab/uikit-workshop",
+    "outputDir": "",
+    "enabled": true,
+    "excludedPatternStates": [],
+    "excludedTags": []
+  }],
   "engines": {
     "twig": {
-      "namespaces": [
-        {
+      "namespaces": [{
           "id": "atoms",
           "recursive": true,
           "paths": [
@@ -152,14 +149,12 @@
           ]
         }
       ],
-      "alterTwigEnv": [
-        {
-          "file": "alter-twig.php",
-          "functions": [
-            "addCustomExtension"
-          ]
-        }
-      ]
+      "alterTwigEnv": [{
+        "file": "alter-twig.php",
+        "functions": [
+          "addCustomExtension"
+        ]
+      }]
     }
   }
 }

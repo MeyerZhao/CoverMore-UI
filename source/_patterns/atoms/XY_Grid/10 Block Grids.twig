@@ -1,0 +1,44 @@
+<style>
+    .show-outline div {
+        outline: 1px solid #6ed2ff;
+        background: #eaf9ff;
+        padding: 10px;
+    }
+</style>
+<div class="show-outline">
+    <h5>Block Grids</h5>
+    <p>small-up-2 medium-up-4 large-up-6 :</p>
+    <p>分别表示 在 small 下 一行2个</p>
+    <p>分别表示 在 medium 下 一行4个</p>
+    <p>分别表示 在 large 下 一行6个</p>
+    <div class="grid-x grid-padding-x small-up-2 medium-up-4 large-up-6">
+        <div class="cell">cell</div>
+        <div class="cell">cell</div>
+        <div class="cell">cell</div>
+        <div class="cell">cell</div>
+        <div class="cell">cell</div>
+        <div class="cell">cell</div>
+    </div>
+
+    <h5>语义构建</h5>
+    ......
+    <p>XY 网格 CSS 是使用一组强大的 Sass mixin 生成的，您可以在自己的代码中使用它们来构建语义网格。</p>
+
+    <h5>网格容器</h5>
+    <code>
+        .container {
+            @include xy-grid-container;
+          }
+
+    </code>
+
+    <h5>网格</h5>
+    <code>
+        .my-grid {
+            @include xy-grid;
+          }
+
+    </code>
+    <h5>自定义块网格</h5>
+
+</div>
