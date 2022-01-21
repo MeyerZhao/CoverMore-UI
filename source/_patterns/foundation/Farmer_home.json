@@ -1,0 +1,32 @@
+{
+	"title" : "Top 10 Trails You Have To Hike Before You Die",
+	"bodyClass": "article",
+	"author" : {
+		"first-name" : "Julianne",
+		"last-name" : "McCormick"
+	},
+	"img": {
+		"getquote__bg": {
+			"src": "../../images/sample/getQuote_bg.min.jpg",
+			"alt": "this is a getquote background image"
+		},
+		"footer__logo": {
+			"src": "../../images/sample/footer_logo.svg",
+			"alt": "this is a footer logo svg"
+		},
+		"landscape_16x9": {
+			"src": "../../images/sample/landscape-16x9-mountains.jpg",
+			"alt": "Mountains"
+		}
+	},
+	"inset_blocks" : [
+		{
+			"headline" : "This is the headline for the inset block"
+		}
+	],
+	"latest_block" : [
+		{
+			"headline" : "This is the headline for the latest block"
+		}
+	]
+}

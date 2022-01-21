@@ -1,0 +1,236 @@
+<div class="page" id="page">
+    {% include "@organisms/global/header.twig" %}
+    <main class="main" role="main">
+
+        {# Begin getquote #}
+        <section class="getquote">
+            <div class="grid-container">
+                <div class="grid-x grid-margin-x">
+                    <div class="cell ">
+                        <div class="getquote__inner">
+                            <div class="getquote__header">
+                                <h2 class="getquote__title">Get a Travel Insurance Quote</h2>
+                            </div>
+                            <div class="getquote__body">
+
+
+                                <form> {# https://get.foundation/sites/docs/forms.html #}
+                                    <div class="grid-container">
+                                        <div class="grid-x grid-padding-x">
+                                            <div class="medium-4 cell cell--right-split">
+                                                <h3 class="getquote--h3">Where are you going?</h3>
+                                                <p>
+                                                    <label class="label--getquote">Destination</label>
+                                                    <select required="">
+                                                        <option value=""></option>
+                                                        <option value="volvo">
+                                                            <font style="vertical-align: inherit;">
+                                                                <font style="vertical-align: inherit;">沃尔沃</font>
+                                                            </font>
+                                                        </option>
+                                                        <option value="saab">
+                                                            <font style="vertical-align: inherit;">
+                                                                <font style="vertical-align: inherit;">萨博</font>
+                                                            </font>
+                                                        </option>
+                                                        <option value="mercedes">
+                                                            <font style="vertical-align: inherit;">
+                                                                <font style="vertical-align: inherit;">梅赛德斯</font>
+                                                            </font>
+                                                        </option>
+                                                        <option value="audi">
+                                                            <font style="vertical-align: inherit;">
+                                                                <font style="vertical-align: inherit;">奥迪</font>
+                                                            </font>
+                                                        </option>
+                                                    </select>
+                                                </p>
+
+                                            </div>
+                                            <div class="medium-4 cell cell--right-split">
+                                                <h3 class="getquote--h3">When are you going?</h3>
+                                                <p>
+                                                    <label class="label--getquote">Departure Date </label>
+                                                    <input class="radius" type="text" placeholder="mm/dd/yyyy">
+                                                </p>
+                                                <p>
+                                                    <label class="label--getquote">Return Date </label>
+                                                    <input class="radius" type="text" placeholder="mm/dd/yyyy">
+                                                </p>
+                                            </div>
+                                            <div class="medium-4 cell">
+                                                <h3 class="getquote--h3">Who is traveling?</h3>
+                                                <p>
+                                                    <label class="label--getquote">State of Residence </label>
+                                                    <select required="">
+                                                        <option value=""></option>
+                                                        <option value="volvo">
+                                                            <font style="vertical-align: inherit;">
+                                                                <font style="vertical-align: inherit;">沃尔沃</font>
+                                                            </font>
+                                                        </option>
+                                                        <option value="saab">
+                                                            <font style="vertical-align: inherit;">
+                                                                <font style="vertical-align: inherit;">萨博</font>
+                                                            </font>
+                                                        </option>
+                                                        <option value="mercedes">
+                                                            <font style="vertical-align: inherit;">
+                                                                <font style="vertical-align: inherit;">梅赛德斯</font>
+                                                            </font>
+                                                        </option>
+                                                        <option value="audi">
+                                                            <font style="vertical-align: inherit;">
+                                                                <font style="vertical-align: inherit;">奥迪</font>
+                                                            </font>
+                                                        </option>
+                                                    </select>
+                                                </p>
+                                                <div class="grid-x grid-padding-x--10">
+                                                    <div class="cell small-3">
+                                                        <p>
+                                                            <label class="label--getquote">Age</label>
+                                                            <input class="radius" type="text"
+                                                                placeholder=".medium-6.cell">
+                                                        </p>
+                                                    </div>
+                                                    <div class="cell auto">
+                                                        <p>
+                                                            <label class="label--getquote">Trip Cost</label>
+                                                            <input class="radius" type="text"
+                                                                placeholder=".medium-6.cell">
+                                                        </p>
+                                                    </div>
+                                                    <div class="cell shrink">
+                                                        <label class="label--getquote">Add</label>
+                                                        <div class="input__div">
+                                                            <button class="button tiny primary round btn--getquote-add"
+                                                                href="#">
+                                                                +
+                                                            </button>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="getquote__footer">
+                                <div class="grid-container">
+                                    <div class="grid-x grid-padding-x">
+                                        <div class="cell medium-4 large-offset-8">
+                                            <button
+                                                class="button primary radius expanded no-margin button--getquote-submit"
+                                                href="#">Get a Quote</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="getquote__bg">
+                <figure class="orbit-figure">
+                    <img src="{{ img.getquote__bg.src }}" alt="{{ img.getquote__bg.alt }}" />
+                </figure>
+            </div>
+        </section>
+        {# End getquote #}
+
+
+        <section>
+            <div class="section__header">
+                <h2 class="section__title text-center">Travel Insurance Benefits</h2>
+                <p class="section__sub-title text-center">offered and provided by Cover-More*</p>
+            </div>
+            <div class="grid-container">
+                <div class="grid-x grid-margin-x">
+                    <div class="cell small-4">
+                        <div class="cm-card">
+                            <div class="cm-card__header">
+                                <i class="fi-plus  size-72 color--primary"></i>
+                            </div>
+                            <div class="cm-card__body">
+                                <h3 class="cm-card__title text-center">Purchase Guarantee</h3>
+                                <p class="cm-card__p text-center">With 24-hour emergency assistance included, worldwide medical help is never more than a phone call away. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell small-4">
+                        <div class="cm-card">
+                            <div class="cm-card__header">
+                                <i class="fi-plus  size-72 color--primary"></i>
+                            </div>
+                            <div class="cm-card__body">
+                                <h3 class="cm-card__title text-center">Purchase Guarantee</h3>
+                                <p class="cm-card__p text-center">If you are not completely satisfied within 21 days of purchasing this plan, Cover-More will refund your premium cost, if you have not departed on your trip or filed a claim.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell small-4">
+                        <div class="cm-card">
+                            <div class="cm-card__header">
+                                <i class="fi-plus  size-72 color--primary"></i>
+                            </div>
+                            <div class="cm-card__body">
+                                <h3 class="cm-card__title text-center">Trip Cancellation</h3>
+                                <p class="cm-card__p text-center">The Comprehensive Plan can reimburse you for non-refundable, prepaid trip expenses if your trip is cancelled for a covered reason.
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+
+
+
+
+        <!-- <style>
+            .show-outline div {
+                outline: 1px solid #6ed2ff;
+                background: #eaf9ff;
+                padding: 10px;
+            }
+        </style>
+        <div class="show-outline ">
+            <div class="grid-container">
+                <div class="grid-x grid-margin-x">
+                    <div class="grid-container full">
+                        <div class="grid-margin-x grid-x">
+                            <div class="cell small-4">cell</div>
+                            <div class="cell small-4">cell</div>
+                            <div class="cell small-4">cell</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-container full">
+                <div class="grid-margin-x grid-x">
+                    <div class="cell small-4">cell</div>
+                    <div class="cell small-4">cell</div>
+                    <div class="cell small-4">cell</div>
+                </div>
+            </div>
+        </div> -->
+
+
+
+
+
+
+    </main>
+    <!--End role=main-->
+    {% include "@organisms/global/footer.twig" %}
+</div>
