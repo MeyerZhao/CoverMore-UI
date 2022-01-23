@@ -75,10 +75,6 @@
   text-transform: uppercase;
 }
 
-body {
-  font-family: "Museo Sans Rounded", Helvetica, Roboto, Arial, sans-serif;
-  font-style: normal;
-}
 
 .header {
   background: $white;
@@ -177,10 +173,8 @@ body {
 
   .label--#{$self} {
     font-size: 0.8125rem;
-    font-weight: 300;
     line-height: 1.8;
     color: #363636;
-    padding: 0;
   }
 
   &__footer {
