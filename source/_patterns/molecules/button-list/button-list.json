@@ -1,0 +1,21 @@
+{
+  "button": {
+    "tag": "a",
+    "link": "http://google.com",
+    "text": "Hello World!!"
+  },
+
+  "lists": {
+    "list": [
+      {
+        "name": "John"
+      },
+      {
+        "name": "Mark"
+      },
+      {
+        "name": "Jane"
+      }
+    ]
+  }
+}

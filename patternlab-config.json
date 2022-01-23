@@ -23,15 +23,15 @@
   "ishViewportRange": {
     "s": [
       240,
-      500
+      640
     ],
     "m": [
-      500,
-      800
+      641,
+      1024
     ],
     "l": [
-      800,
-      2600
+      1024,
+      2000
     ]
   },
   "logLevel": "info",
@@ -58,7 +58,8 @@
       "js": "./source/js",
       "images": "./source/images",
       "fonts": "./source/fonts",
-      "css": "./source/css"
+      "css": "./source/css",
+      "theme": "./source/theme"
     },
     "public": {
       "root": "public/",
@@ -69,7 +70,8 @@
       "js": "public/js",
       "images": "public/images",
       "fonts": "public/fonts",
-      "css": "public/css"
+      "css": "public/css",
+      "theme": "public/theme"
     }
   },
   "patternExtension": "twig",
@@ -80,7 +82,9 @@
   ],
   "patternExportAll": false,
   "patternExportDirectory": "./pattern_exports/",
-  "patternExportPatternPartials": ["templates-homepage"],
+  "patternExportPatternPartials": [
+    "templates-homepage"
+  ],
   "patternExportPreserveDirectoryStructure": true,
   "patternExportRaw": false,
   "patternMergeVariantArrays": true,
@@ -91,22 +95,25 @@
   "starterkitSubDir": "dist",
   "styleGuideExcludes": [],
   "theme": {
-    "color": "light",
+    "color": "dark",
     "density": "compact",
     "layout": "horizontal",
     "noViewAll": false
   },
-  "uikits": [{
-    "name": "uikit-workshop",
-    "package": "@pattern-lab/uikit-workshop",
-    "outputDir": "",
-    "enabled": true,
-    "excludedPatternStates": [],
-    "excludedTags": []
-  }],
+  "uikits": [
+    {
+      "name": "uikit-workshop",
+      "package": "@pattern-lab/uikit-workshop",
+      "outputDir": "",
+      "enabled": true,
+      "excludedPatternStates": [],
+      "excludedTags": []
+    }
+  ],
   "engines": {
     "twig": {
-      "namespaces": [{
+      "namespaces": [
+        {
           "id": "atoms",
           "recursive": true,
           "paths": [
@@ -149,12 +156,14 @@
           ]
         }
       ],
-      "alterTwigEnv": [{
-        "file": "alter-twig.php",
-        "functions": [
-          "addCustomExtension"
-        ]
-      }]
+      "alterTwigEnv": [
+        {
+          "file": "alter-twig.php",
+          "functions": [
+            "addCustomExtension"
+          ]
+        }
+      ]
     }
   }
 }

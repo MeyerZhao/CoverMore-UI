@@ -1,0 +1,41 @@
+// Global Styles
+// https://get.foundation/sites/docs/global.html#sass-variables
+.bg--primary {
+  background-color: get-color(primary);
+}
+
+.bg--secondary {
+  background-color: get-color(secondary);
+}
+
+.bg--success {
+  background-color: get-color(success);
+}
+
+.bg--warning {
+  background-color: get-color(warning);
+}
+
+.bg--alert {
+  background-color: get-color(alert);
+}
+
+.bg--white {
+  background-color: $white;
+}
+
+.bg--light_gray {
+  background-color: $light-gray;
+}
+
+.bg--medium_gray {
+  background-color: $medium-gray;
+}
+
+.bg--dark_gray {
+  background-color: $dark-gray;
+}
+
+.bg--black {
+  background-color: $black;
+}

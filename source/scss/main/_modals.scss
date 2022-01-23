@@ -1,0 +1,74 @@
+.modal {
+  display: none;
+  height: 100%;
+  max-height: none;
+  max-width: 100%;
+
+  @media screen and #{breakpoint(medium)} {
+    height: auto;
+    max-height: 640px;
+    max-width: 640px;
+  }
+}
+
+.fancybox-bg {
+  color: map-deep-get($cmap-standard, black-solid);
+}
+
+.fancybox-is-open {
+  .fancybox-bg {
+    opacity: 0.7;
+  }
+}
+
+.fancybox-slide--html {
+  padding: 0;
+
+  .fancybox-content {
+    border-radius: 0;
+    cursor: auto;
+    min-width: 100%;
+    overflow: hidden;
+    padding: 30px 0 0;
+
+    @media screen and #{breakpoint(medium)} {
+      border-radius: 4px;
+      min-width: 640px;
+    }
+
+    h3 {
+      // sass-lint:disable-block no-duplicate-properties
+      color: map-deep-get($cmap-standard, bahama-blue-approx);
+      color: map-deep-get($cmap-customs, primary-color);
+      font-size: rem-calc(28);
+    }
+
+    h4 {
+      font-size: rem-calc(18);
+    }
+
+    .scrollable-content {
+      -webkit-overflow-scrolling: touch;
+      max-height: 100%;
+      min-width: 100%;
+      overflow: auto;
+      padding: 0 30px 30px;
+
+      @media screen and #{breakpoint(medium)} {
+        max-height: 610px;
+      }
+    }
+
+    .fancybox-close-small {
+      color: map-deep-get($cmap-standard, dusty-gray-approx);
+      right: 0;
+      top: 0;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background: none;
+      }
+    }
+  }
+}

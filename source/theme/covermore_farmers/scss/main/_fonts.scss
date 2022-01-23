@@ -1,0 +1,31 @@
+//   Font Faces
+//weights
+$font-face-bold: 700;
+$font-face-medium: 500;
+$font-face-light: 300;
+
+//families
+$font-family-primary: 'Museo Sans Rounded';
+
+//sources
+@font-face {
+  font-family: $font-family-primary;
+  font-style: normal;
+  font-weight: $font-face-light;
+  src: url('../fonts/MuseoSansRounded/museosansrounded-300-webfont.eot'),
+  url('../fonts/MuseoSansRounded/museosansrounded-300-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/MuseoSansRounded/museosansrounded-300-webfont.woff') format('woff'),
+  url('../fonts/MuseoSansRounded/museosansrounded-300-webfont.ttf') format('truetype'),
+  url('../fonts/MuseoSansRounded/museosansrounded-300-webfont.svg#museo_sans_rounded_300regular') format('svg');
+}
+
+@font-face {
+  font-family: $font-family-primary;
+  font-style: normal;
+  font-weight: $font-face-medium;
+  src: url('../fonts/MuseoSansRounded/museosansrounded-500-webfont.eot'),
+  url('../fonts/MuseoSansRounded/museosansrounded-500-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/MuseoSansRounded/museosansrounded-500-webfont.woff') format('woff'),
+  url('../fonts/MuseoSansRounded/museosansrounded-500-webfont.ttf') format('truetype'),
+  url('../fonts/MuseoSansRounded/museosansrounded-500-webfont.svg#museo_sans_rounded_500regular') format('svg');
+}

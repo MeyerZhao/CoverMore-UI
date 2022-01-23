@@ -1,0 +1,189 @@
+// Datepicker Overrides
+#edit-dep-date,
+#edit-return-date {
+  background: $white $background-date-field no-repeat top 50% right 10px;
+}
+
+.daterangepicker {
+  border: 1px solid map-deep-get($cmap-standard, mercury-approx) !important;
+  border-radius: 3px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  font-family: $font-family-primary;
+  margin-top: -1px;
+
+  @media screen and #{breakpoint(large up)} {
+    max-width: 215px;
+  }
+
+  &:before {
+    display: none;
+  }
+
+  &:after {
+    display: none;
+  }
+
+  .drp-calendar {
+    padding: 1px !important;
+
+    &.left {
+      padding: 0;
+
+      .calendar-table {
+        padding: 0 !important;
+      }
+
+    }
+
+  }
+
+  th {
+    padding: 0;
+
+    &.month {
+      font-family: $font-family-primary;
+      font-weight: $font-face-medium;
+      height: 30px;
+    }
+
+    &.available {
+      &:hover {
+        background: none;
+      }
+    }
+
+  }
+
+  td {
+    background: map-deep-get($cmap-standard, pure-white);
+    border-radius: 0 !important;
+    padding: 0;
+
+    &.active,
+    &.active:hover { // sass-lint:disable-line force-pseudo-nesting
+      background: map-deep-get($cmap-customs, secondary-color);
+      color: map-deep-get($cmap-standard, pure-white);
+    }
+
+    &.disabled {
+      color: map-deep-get($cmap-standard, mercury-approx);
+      text-decoration: none;
+    }
+
+  }
+
+  thead {
+    background: none;
+    color: map-deep-get($cmap-standard, mine-shaft-approx);
+
+    tr {
+      &:nth-child(2) {
+        th {
+          background: map-deep-get($cmap-customs, primary-color);
+          border-radius: 0 !important;
+          color: map-deep-get($cmap-standard, pure-white);
+        }
+      }
+    }
+  }
+
+  .calendar-table {
+    border-radius: 0;
+
+    table {
+      border-radius: 0;
+    }
+
+    th,
+    td {
+      min-width: 30px;
+      width: 30px;
+    }
+
+    .next,
+    .prev {
+      span {
+        border-color: map-deep-get($cmap-standard, gray-approx);
+        border-width: 0 1px 1px 0;
+      }
+    }
+  }
+
+  &.show-double {
+    max-width: 100%;
+
+    .drp-calendar {
+      &.right {
+        display: block !important;
+      }
+    }
+  }
+}
+
+form {
+  div.field-dept-datepicker-wrapper,
+  div.field-return-datepicker-wrapper {
+    div.input-group {
+      a.datepicker-button {
+        height: 39px;
+        width: 30px;
+
+        @media screen and #{breakpoint(small down)} {
+          left: 187px;
+          right: 0;
+        }
+      }
+    }
+
+    div.datepicker-calendar.blue {
+      top: 68px !important;
+      width: 216px;
+
+      @media screen and #{breakpoint(small down)} {
+        width: 220px;
+      }
+
+      div.datepicker-month-wrap {
+        .datepicker-month {
+          color: map-deep-get($cmap-standard, mine-shaft-approx);
+          font-weight: normal;
+        }
+
+        .datepicker-month-next,
+        .datepicker-month-prev {
+          .fa-caret-right,
+          .fa-caret-left {
+            color: map-deep-get($cmap-standard, gray-approx);
+          }
+
+          &.disabled {
+            display: none;
+          }
+        }
+      }
+
+      table.datepicker-grid {
+        th {
+          background: map-deep-get($cmap-customs, primary-color);
+        }
+
+        th, td {
+          border-radius: 0;
+          font-family: $font-family-primary;
+          height: 25px;
+          min-width: 30px;
+          width: 30px;
+
+          &.empty {
+            color: map-deep-get($cmap-standard, mercury-approx);
+          }
+        }
+
+        td {
+          color: map-deep-get($cmap-standard, mine-shaft-approx);
+        }
+      }
+    }
+  }
+}

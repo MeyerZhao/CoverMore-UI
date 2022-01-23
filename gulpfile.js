@@ -1,19 +1,25 @@
 var gulp = require('gulp');
-var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
+var $    = require('gulp-load-plugins')();
+
+var sassPaths = [
+  'node_modules/foundation-sites/scss',
+  'node_modules/motion-ui/src'
+];
+
 
 gulp.task('sass', function () {
-	gulp.src('./source/css/*.scss')
+	gulp.src('source/scss/covermore_farmers.scss')
     .pipe(sourcemaps.init())
-		// .pipe(sass().on('error', sass.logError))
-    .pipe(sass.sync({ outputStyle: 'compressed' }).on('error', sass.logError))
-    .pipe(sourcemaps.write('./maps'))
-		.pipe(gulp.dest('./source/css'));
+    .pipe($.sass.sync({ outputStyle: 'compressed', includePaths: sassPaths }).on('error', $.sass.logError))
+    .pipe($.autoprefixer({
+      browsers: ['last 2 versions', 'ie >= 9']
+    }))
+    .pipe(sourcemaps.write('./'))
+		.pipe(gulp.dest('source/css'));
 });
 
 
-
-// Watch for changes for scss files and rebuild.
-gulp.task('watch', ['sass'], function () {
-  gulp.watch('./source/css/**/*.scss', ['sass']);
+gulp.task('watch', ['sass'], function() {
+  gulp.watch(['source/css/**/*.scss'], ['sass']);
 });
