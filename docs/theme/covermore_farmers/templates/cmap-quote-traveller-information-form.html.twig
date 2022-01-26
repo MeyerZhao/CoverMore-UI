@@ -1,0 +1,51 @@
+{{ attach_library('cmap_quote/traveller_information') }}
+{# Form internal use#}
+{{ form.form_build_id }}
+{{ form.form_token }}
+{{ form.form_id }}
+<h1>{{ form.title }}</h1>
+<p>{{ form.info }}</p>
+{# Traveller #}
+{% for traveller in form.travellers|slice(1, form['#tcount'] + 1) %}
+  {% set wrapperClass = (loop.index == 1) ? 'primary' : 'secondary' %}
+  <section class="{{ wrapperClass }} traveller-form traveller-form--{{ loop.index }} ">
+    {# Taveller heading like Traveller 1 etc #}
+    <h2>
+      {{ traveller.heading }}
+      {% if traveller['#age'] %}
+        - {{ 'Age @age'|t({'@age': traveller['#age'] }) }}
+      {% endif %}
+      {% if traveller['#trip_cost'] %}
+        - {{ 'Trip Cost @tripCost'|t({'@tripCost': traveller['#trip_cost']}) }}
+      {% endif %}
+    </h2>
+    <ol class="purchaseList">
+      {% for fieldName in traveller['#orderedElements'] %}
+        {% if fieldName != 'heading' %}
+          {% set columnClasses = '' %}
+          {% if traveller[fieldName]['#wrapper_columns'] %}
+            {% set columnClasses = traveller[fieldName]['#wrapper_columns'] %}
+          {% endif %}
+          <li class="columns {{ columnClasses }}">
+            {{ traveller[fieldName] }}
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ol>
+  </section>
+
+  {# EMC Start #}
+  {{ traveller.emc }}
+  {# EMC End #}
+{% endfor %}
+
+{% if form.opt_in_marketing %}
+  <div class="option-marketing-wrapper">
+    {{ form.opt_in_marketing }}
+  </div>
+{% endif %}
+
+<div class="button-well">
+  {{ form.back_modify }}
+  {{ form.submit }}
+</div>

@@ -1,0 +1,114 @@
+// Quote Summary (My Trip Details)
+.quote-summary {
+  margin-bottom: 60px;
+  position: relative;
+
+  @media screen and #{breakpoint(small down)} {
+    margin-bottom: 40px;
+  }
+
+  @media print {
+    display: none;
+  }
+
+}
+
+.c-trip-info {
+  background-color: map-deep-get($cmap-standard, mercury-lighter);
+  max-width: 300px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+
+  .edit-details {
+    display: inline-block;
+    float: right;
+  }
+
+  h4,
+  span,
+  tr,
+  td {
+    font-size: rem-calc(12);
+    line-height: rem-calc(15);
+  }
+
+  span {
+    font-weight: $font-face-light;
+
+    @media screen and #{breakpoint(small down)} {
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+  }
+
+  .c-trip-info__details {
+    padding: 15px;
+  }
+
+}
+
+.trip-info--prices--header {
+  font-weight: $font-face-bold;
+  margin-bottom: 2px;
+  padding-top: 25px;
+
+  &:first-of-type {
+    padding-top: 0;
+  }
+}
+
+.trip-info--prices {
+  margin-bottom: 0;
+
+  tbody {
+    background: none;
+    border: 0;
+
+    tr,
+    td {
+      background: none;
+      padding: 2px 0;
+      vertical-align: top;
+    }
+
+    tr {
+      &:nth-child(2n) {
+        background: none;
+      }
+    }
+
+    .trip-info--prices--header {
+      td {
+        padding-top: 15px;
+      }
+    }
+
+    .trip-info--price--label {
+      width: 65%;
+    }
+
+    .trip-info--rule {
+      border-bottom: 1px solid map-deep-get($cmap-standard, mine-shaft);
+
+      td {
+        padding-top: 5px;
+      }
+    }
+
+    .total {
+      font-weight: $font-face-bold;
+
+      td {
+        padding: 15px 0 5px;
+      }
+    }
+  }
+}
+
+
+.trip-info--price--value {
+  text-align: right;
+}

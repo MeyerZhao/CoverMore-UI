@@ -1,0 +1,38 @@
+{
+  "title": "Home Page Template",
+  "bodyClass": "home",
+  "author": {
+    "first-name": "Meyer",
+    "last-name": "Zhao"
+  },
+  "destination_select": {
+    "name": "Destination"
+  },
+  "residence_select": {
+    "name": "State of Residence"
+  },
+  "img": {
+    "site__logo": {
+      "src": "../../images/sample/logo.svg",
+      "alt": "this is a site logo"
+    },
+    "getquote__bg": {
+      "src": "http://placehold.jp/30px/8c8c8c/ffffff/1954x470.png?text=Banner%20Image",
+      "alt": "this is a getquote background image"
+    },
+		"footer__logo": {
+			"src": "../../images/sample/footer_logo.svg",
+			"alt": "this is a footer logo svg"
+		},
+    "landscape_16x9": {
+      "src": "../../images/fpo_16x9.png",
+      "alt": "Mountains"
+    }
+  },
+  "inset_blocks": [{
+    "headline": "This is the headline for the inset block"
+  }],
+  "latest_block": [{
+    "headline": "This is the headline for the latest block"
+  }]
+}

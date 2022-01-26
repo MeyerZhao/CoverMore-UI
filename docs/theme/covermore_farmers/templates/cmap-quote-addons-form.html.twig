@@ -1,0 +1,14 @@
+{# Form internal use#}
+{{ form.form_build_id }}
+{{ form.form_token }}
+{{ form.form_id }}
+
+<h1>{{ form.title }}</h1>
+<h2 class="intro-copy">{{'Based off the product you have selected, we provide a number of options to vary cover. Information for these is provided here. Press the help button[?] for details.'|t}}</h2>
+<span class="AddonSelectedText">{{ "Added for "|t}}</span>
+{{ form.addons }}
+
+<div class="button-well">
+  {{ form.back_modify }}
+  {{ form.submit }}
+</div>

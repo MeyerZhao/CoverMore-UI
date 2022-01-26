@@ -1,0 +1,288 @@
+$error-text-color: get-color(alert);
+
+// Page Header Override
+.cmap-quote-addons {
+
+  // Page Header
+  h1 {
+    font-size: rem-calc(25);
+
+    +.intro-copy {
+      margin-top: 20px;
+    }
+
+  }
+
+  // Intro copy
+  .intro-copy {
+    font-size: rem-calc(15);
+    font-weight: $font-face-light;
+    margin-bottom: 25px;
+    max-width: 640px;
+  }
+
+}
+
+// For All Add-On Items
+.add-on-item {
+  background: map-deep-get($cmap-standard, pure-white);
+  box-shadow: 0 2px 4px 0 map-deep-get($cmap-standard, box-shadows);
+  margin-bottom: 35px;
+  min-height: 180px;
+  padding: 17px 17px 10px 130px;
+  position: relative;
+
+  @media screen and #{breakpoint(small down)} {
+    padding: 35px;
+  }
+
+  // Add-On Icons
+  &::before {
+    // sass-lint:disable-block no-duplicate-properties
+    background-color: map-deep-get($cmap-standard, bahama-blue-approx);
+    background-color: var(--primary-color) !important;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 45px 45px;
+    content: '';
+    display: inline-block;
+    height: 44px;
+    left: 40px;
+    position: absolute;
+    top: 60px;
+    width: 44px;
+
+    @media screen and #{breakpoint(small down)} {
+      left: 16px;
+      top: 35px;
+    }
+
+  }
+
+  // Luggage Icon
+  &.item-LUGG {
+
+    &::before {
+      background-image: $luggage-addon;
+    }
+
+  }
+
+  // Rental Car Icon
+  &.item-RTCR {
+
+    &::before {
+      background-image: $rental-car-addon;
+    }
+
+  }
+
+  // Motorsport Icon
+  &.item-MTCL {
+
+    &::before {
+      background-image: $motorsport-addon;
+    }
+
+  }
+
+  // Cancellation Icon
+  &.item-CANX {
+
+    &::before {
+      background-image: $cancellation-addon;
+    }
+
+  }
+
+  // Wintersport Icon
+  &.item-WNTS {
+
+    &::before {
+      background-image: $wintersport-addon;
+    }
+
+  }
+
+  &.item-ADVACT,
+  &.item-ADVACT2 {
+    &::before {
+      background-image: $adventure-addon;
+    }
+  }
+
+  &.item-MTCLTWO {
+    &::before {
+      background-image: $motorcycle-addon;
+    }
+  }
+
+  &.item-SNSPRTS,
+  &.item-GSU {
+    &::before {
+      background-image: $snow-addon;
+    }
+  }
+
+  &.item-CRS {
+    &:before {
+      background-image: $cruise-addon;
+    }
+  }
+
+}
+
+// Add-On Title
+.add-on-item--title {
+
+  h3 {
+    float: left;
+    font-size: rem-calc(15);
+    font-weight: $font-face-medium;
+    line-height: rem-calc(18);
+
+    @media screen and #{breakpoint(small down)} {
+      margin-left: 50px;
+    }
+
+    span {
+      float: right;
+      font-size: 0.9375rem;
+      padding-top: 0;
+    }
+
+  }
+
+  // AddonSelectedPrice
+  .AddonSelectedPrice {
+    text-align: right;
+  }
+
+
+}
+
+// Add-On Description
+.add-on-item--description {
+  clear: both;
+  font-size: rem-calc(15);
+  line-height: rem-calc(20);
+  margin-bottom: 18px;
+  margin-top: 10px;
+  max-width: 500px;
+  min-height: 60px;
+}
+
+// Add-On Options
+.add-on-item--option {
+
+  legend {
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+  }
+
+  label {
+    font-size: rem-calc(15);
+    font-weight: 300;
+    line-height: rem-calc(18);
+  }
+
+  input {
+    &[type='radio'] {
+
+      &:focus-visible,
+      &:disabled {
+        appearance: none;
+        background: transparent;
+        clip: rect(-3px, 53px, 26px, -3px);
+        height: 23px;
+        outline: 1px dotted $black;
+        width: 50px;
+        z-index: 5;
+      }
+    }
+  }
+
+}
+
+// Luggage List
+.luggage-list {
+
+  ul {
+    list-style-type: none;
+
+    li {
+      padding-top: 8px;
+      text-align: center;
+
+      @media screen and #{breakpoint(small down)} {
+        text-align: left;
+      }
+
+      &:first-of-type {
+        padding-top: 0;
+      }
+
+      span {
+
+        @media screen and #{breakpoint(small down)} {
+          display: block;
+        }
+
+      }
+
+      .button {
+        background: transparent !important;
+        border: 0;
+        border-radius: 0;
+        color: map-deep-get($cmap-standard, curious-blue-approx);
+        font-size: rem-calc(16);
+        font-weight: $font-face-light;
+        height: auto;
+        line-height: rem-calc(16);
+        margin: -2px 0 0;
+        max-width: none;
+        padding: 0 10px;
+        text-decoration: underline;
+        text-transform: none;
+        transition: none;
+        width: auto;
+
+        @media screen and #{breakpoint(small down)} {
+          padding: 0;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+// Luggage Add-On Specific
+.LUGG-wrapper {
+  border-top: 1px solid map-deep-get($cmap-standard, alto-approx);
+  margin: 20px -17px 0 -130px;
+  padding: 20px 20px 0 40px;
+
+  @media screen and #{breakpoint(small down)} {
+    margin: 20px -35px 0;
+    padding: 20px 35px 10px;
+  }
+
+  .form-select {
+
+    @media screen and #{breakpoint(small down)} {
+      max-width: none;
+    }
+
+  }
+
+}
+
+.AddonSelectedText {
+  display: none;
+}
