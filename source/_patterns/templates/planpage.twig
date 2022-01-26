@@ -1,0 +1,45 @@
+{% extends "@templates/layouts/page-plan-option.twig" %}
+
+{% block topbar %}
+  {% include "@components/topbar.twig" %}
+{% endblock %}
+
+
+
+{% block main %}
+{#
+<style>
+  .show-outline div {
+    outline: 1px solid #6ed2ff;
+    background: #eaf9ff;
+    padding: 10px;
+}
+</style> #}
+<section class="section section--plan-option show-outline">
+
+  <div class="grid-container">
+    <div class="grid-x grid-margin-x">
+      <div class="cell ">
+          <div class="section__header">
+            <h2 class="section__title title--section-primary">Plan Options</h2>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="grid-container">
+    <div class="grid-x grid-margin-x">
+
+      <div class="cell small-6">
+        {% include "@molecules/blocks/plan-options.twig" %}
+      </div>
+
+      <div class="cell small-6">
+        {% include "@molecules/blocks/plan-options.twig" %}
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+{% endblock %}

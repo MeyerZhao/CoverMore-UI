@@ -31,7 +31,7 @@
     ],
     "l": [
       1024,
-      2000
+      3000
     ]
   },
   "logLevel": "info",
@@ -58,8 +58,7 @@
       "js": "./source/js",
       "images": "./source/images",
       "fonts": "./source/fonts",
-      "css": "./source/css",
-      "theme": "./source/theme"
+      "css": "./source/css"
     },
     "public": {
       "root": "public/",
@@ -70,8 +69,7 @@
       "js": "public/js",
       "images": "public/images",
       "fonts": "public/fonts",
-      "css": "public/css",
-      "theme": "public/theme"
+      "css": "public/css"
     }
   },
   "patternExtension": "twig",
@@ -118,6 +116,13 @@
           "recursive": true,
           "paths": [
             "source/_patterns/atoms"
+          ]
+        },
+        {
+          "id": "components",
+          "recursive": true,
+          "paths": [
+            "source/_patterns/components"
           ]
         },
         {
