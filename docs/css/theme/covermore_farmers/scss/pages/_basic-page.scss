@@ -1,0 +1,103 @@
+/**
+ * Default handling to show and hide the hero image.
+ */
+.paragraph--type--hero-image {
+
+  img {
+    width: 100%;
+  }
+
+  .field-paragraph--field-image-small {
+    display: none;
+
+    @media screen and #{breakpoint(small down)} {
+      display: block;
+    }
+
+  }
+
+  .field-paragraph--field-image-large {
+
+    @media screen and #{breakpoint(small down)} {
+      display: none;
+    }
+
+  }
+
+}
+
+// Overrides for basic page
+body {
+
+  &.node--type-page {
+
+    .block-cmap-misc-hero-image {
+      margin-top: 36px;
+      min-height: 65px;
+
+      @media screen and #{breakpoint(small down)} {
+        margin-top: 20px;
+        min-height: 0;
+      }
+
+    }
+
+    .block-page-title-block {
+      margin-top: 36px;
+
+      @media screen and #{breakpoint(small down)} {
+        margin-top: 20px;
+      }
+
+      h1 {
+        font-size: rem-calc(25);
+        line-height: rem-calc(28);
+        margin-bottom: 0;
+      }
+
+    }
+
+    h2 {
+      color: map-deep-get($cmap-standard, cod-gray-approx);
+      font-size: rem-calc(18);
+      line-height: rem-calc(20);
+      margin-bottom: 16px;
+
+      @media screen and #{breakpoint(small down)} {
+        margin-top: 10px;
+      }
+
+    }
+
+    p {
+      color: map-deep-get($cmap-standard, mine-shaft-approx);
+      font-size: rem-calc(15);
+      line-height: rem-calc(28);
+
+      &:first-of-type {
+        padding-top: 8px;
+      }
+
+    }
+
+    table {
+      font-size: rem-calc(15);
+    }
+
+  }
+
+}
+
+a, button {
+  &:focus-visible {
+    outline: 1px dotted $black;
+  }
+}
+
+input {
+  &[type='submit'] {
+    &:focus-visible {
+      outline: 1px dotted $black;
+    }
+  }
+}

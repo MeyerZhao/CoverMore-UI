@@ -1,0 +1,38 @@
+<!-- Begin .header -->
+<header class="header clearfix" role="banner">
+    {# {% include "@atoms/images/logo.twig" %} #}
+
+
+
+    {# <a href="#search-form" class="nav-toggle nav-toggle-search icon-search"><span class="is-vishidden">Search</span></a>
+	<a href="#nav" class="nav-toggle nav-toggle-menu icon-menu"><span class="is-vishidden">Menu</span></a>
+	{% include "@molecules/navigation/primary-nav.twig" %}
+	{% include "@molecules/forms/search.twig" %} #}
+
+    <div class="grid-container">
+        <div class="grid-x grid-margin-x">
+            <div class="cell small-4">
+
+                <div class="top-bar">
+                    <div class="top-bar-left">
+                        <div class="site__logo">
+                            <a href="{{ link.pages-homepage }}" class="logo__link">
+                                <img style="height:44px" src="{{ img.site__logo.src }}" alt="{{ img.site__logo.alt }}"/>
+                                {# <img src="../../images/logo.svg" class="logo" alt="Logo Alt Text" /> #}
+                            </a>
+                        </div>
+                    </div>
+                    <div class="top-bar-right">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</header>
+<!-- End .header -->

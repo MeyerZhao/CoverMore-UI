@@ -1,0 +1,184 @@
+// Country Selector Overrides
+.text--inline > h2 {
+  display: inline;
+}
+
+.selectize-input {
+  border-color: map-deep-get($cmap-standard, mercury-approx);
+  box-shadow: none !important;
+  cursor: text !important;
+  height: 45px;
+  padding-bottom: 0 !important;
+  padding-top: 13px !important;
+
+  > input {
+    cursor: text !important;
+    font-size: rem-calc(15);
+    font-weight: $font-face-light;
+    height: auto;
+
+    &::placeholder {
+      color: $input-placeholder-color;
+      opacity: 1;
+    }
+
+    &:-ms-input-placeholder {
+      color: $input-placeholder-color;
+    }
+
+    &::-ms-input-placeholder {
+      color: $input-placeholder-color;
+    }
+  }
+
+  .item {
+    font-size: rem-calc(15);
+    line-height: 1;
+    max-width: 90%;
+    overflow: hidden;
+    padding: 0 !important;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+
+  > .form-item--error-message {
+    display: none !important;
+  }
+}
+
+// multi-destination list
+.selected-countries {
+  overflow: hidden;
+
+  .country {
+    // sass-lint:disable-block no-duplicate-properties
+    background-color: map-deep-get($cmap-standard, gold-drop-approx);
+    background-color: var(--secondary-color);
+    border: 0;
+    border-radius: 5px;
+    color: map-deep-get($cmap-standard, pure-white);
+    display: inline-block;
+    float: left;
+    font-size: rem-calc(12);
+    height: auto;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    padding: 5px 40px 5px 10px !important;
+    position: relative;
+
+    .remove {
+      border-left: 0;
+      bottom: 0;
+      color: map-deep-get($cmap-standard, pure-white) !important;
+      font-size: rem-calc(12);
+      font-weight: bold;
+      padding-right: 10px !important;
+      padding-top: 4px !important;
+      position: absolute;
+      right: 0;
+      text-decoration: none;
+      top: 0;
+      width: 13px;
+      z-index: 1;
+    }
+  }
+
+  // placement of destination error message
+  + .form-item--error-message {
+    margin-top: -20px;
+  }
+}
+
+.selectize-control {
+  margin-bottom: 20px;
+  max-width: 220px;
+
+  @media screen and #{breakpoint(small down)} {
+    max-width: none;
+  }
+
+  // multi-destination
+  &.multi {
+    .selectize-input {
+      border: 0;
+      padding: 0;
+
+      > input {
+        border: 1px solid map-deep-get($cmap-standard, mercury-approx) !important;
+        border-radius: 3px;
+        left: 0 !important;
+        opacity: 1 !important;
+        padding: 0 8px !important;
+        position: relative !important;
+        top: -13px;
+        transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+        width: 100% !important;
+
+        &:hover,
+        &:focus,
+        &:active {
+          border: $input-border-focus !important;
+        }
+      }
+
+      > .item {
+        display: none;
+      }
+
+      &.has-items {
+        padding: 0;
+      }
+
+      .item,
+      .item.active {
+        // sass-lint:disable-line force-element-nesting
+        background: map-deep-get($cmap-standard, white-smoke);
+        border: 1px solid map-deep-get($cmap-standard, mercury-approx);
+        border-radius: 3px;
+        height: auto;
+        transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+
+        &:hover,
+        &:focus,
+        &:active {
+          border: $input-border-focus;
+        }
+
+        .remove {
+          color: map-deep-get($cmap-standard, remove-red) !important;
+          padding-top: 3px !important;
+        }
+      }
+    }
+
+    .selectize-dropdown {
+      box-shadow: none;
+      margin-top: 0;
+    }
+  }
+
+  // single destination
+  &.single {
+    .selectize-input {
+      &::after {
+        background: $background-select no-repeat 0 0;
+        border: 0;
+        height: 5px;
+        width: 11px;
+      }
+
+      &.focus {
+        .item {
+          background-color: map-deep-get($cmap-standard, gallery-approx);
+        }
+      }
+
+      &.dropdown-active {
+        &::after {
+          margin-top: -3px;
+        }
+      }
+    }
+  }
+}

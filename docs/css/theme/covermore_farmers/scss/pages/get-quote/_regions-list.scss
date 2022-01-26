@@ -1,0 +1,112 @@
+// Regions List
+.regions-wrapper {
+  border: 1px solid map-deep-get($cmap-standard, mercury-approx);
+  border-radius: 3px;
+  border-top-left-radius: 0;
+  font-size: rem-calc(13);
+  left: 0;
+  margin-top: -8px;
+  min-height: 300px;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 10;
+
+  @media screen and #{breakpoint(large up)} {
+    max-width: 760px;
+    min-width: 469px;
+  }
+
+}
+
+.region-group {
+
+  &::before {
+    content: 'Regions';
+    display: inline-block;
+    font-weight: $font-face-medium;
+    padding: 5px 0 0 8px;
+  }
+
+  .is-active {
+
+    .region-link {
+      background-color: map-deep-get($cmap-standard, alabaster-approx) !important;
+    }
+
+  }
+
+  .region-link {
+
+    &::after {
+      background-image: $chevron-region !important;
+      background-position: 0 0 !important;
+      background-repeat: no-repeat;
+      background-size: 6px 10px !important;
+      border: 0 !important;
+      height: 10px !important;
+      margin-top: -5px !important;
+      width: 6px !important;
+    }
+
+    @media screen and #{breakpoint(medium down)} {
+      max-width: none;
+    }
+
+  }
+
+  ul {
+
+    @media screen and #{breakpoint(medium down)} {
+      max-height: 295px;
+      overflow: auto;
+    }
+
+    &.country-list {
+      border: 0;
+      border-left: 1px solid map-deep-get($cmap-standard, alto-approx);
+      margin-left: 0;
+      max-height: calc(100% + 20px);
+      min-height: 305px;
+      overflow: auto;
+
+      @media screen and #{breakpoint(large up)} {
+        padding-bottom: 5px;
+        padding-top: 24px;
+        top: -24px !important;
+      }
+
+      @media screen and #{breakpoint(medium down)} {
+        border-left: 0;
+        max-height: none;
+        position: static;
+      }
+
+      .country-item {
+
+        @media screen and #{breakpoint(large up)} {
+          min-height: 43px;
+          padding: 5px 12px !important;
+        }
+
+        @media screen and #{breakpoint(medium down)} {
+          float: none;
+          width: 100%;
+        }
+
+        .country-link {
+
+          @media screen and #{breakpoint(large up)} {
+            padding: 0 !important;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
