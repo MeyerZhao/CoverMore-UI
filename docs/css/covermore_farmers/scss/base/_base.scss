@@ -1,0 +1,334 @@
+// Base Rules
+// A Base rule is applied to an element using an element selector, a descendent selector, or a child selector, along with any pseudo-classes. It doesn’t include any class or ID selectors. It is defining the default styling for how that element should look in all occurrences on the page.
+
+
+$error-text-color: get-color(alert);
+$input-border-color: map-deep-get($cmap-standard, mercury-approx);
+$input-background-color: map-deep-get($cmap-standard, mercury-approx);
+
+// primary & secondary
+body {
+  --primary-color: get-color(primary);
+  --secondary-color: get-color(secondary);
+}
+
+//original selectors
+//legend, label
+%form-label-extends {
+  font-family: $font-family-primary;
+  font-weight: $font-face-medium;
+}
+
+//input[type="text"], input[type="password"], input[type="search"], input[type="number"]
+%text-input-extends {
+  box-shadow: none;
+  height: 45px;
+  margin-bottom: 20px;
+  padding: 0 13px;
+
+  &::placeholder {
+    color: $input-placeholder-color;
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
+    color: $input-placeholder-color;
+  }
+
+  &::-ms-input-placeholder {
+    color: $input-placeholder-color;
+  }
+
+  &::selection {
+    background-color: map-deep-get($cmap-standard, gallery-approx);
+  }
+
+}
+
+
+
+
+
+// Iframe
+iframe {
+  border: 0;
+}
+// Labels
+label {
+  @extend %form-label-extends;
+
+  &.error,
+  &.error2,
+  &.dateError {
+    border: 0;
+    color: $error-text-color;
+    font-family: $font-family-primary;
+    font-weight: $font-face-light;
+    margin: -5px 0 10px;
+    padding: 0;
+    text-align: left;
+  }
+}
+
+// input
+// input {
+//   &[type=email],
+//   &[type=text] {
+//     &::-ms-clear {
+//       display: none;
+//     }
+//   }
+
+
+//   // Inputs
+//   &[type='tel'],
+//   &[type='email'],
+//   &[type='text'],
+//   &[type='select-multiple'] {
+//     @extend %text-input-extends;
+
+//     &:hover,
+//     &:focus,
+//     &:active {
+//       border: $input-border-focus;
+//     }
+
+//     &.focusLevel {
+//       border: 0;
+//       outline: none;
+//     }
+//   }
+
+
+//   &[type='password'] {
+//     @extend %text-input-extends;
+//   }
+
+//   // Input - Search
+//   &[type='search'] {
+//     @extend %text-input-extends;
+
+//     &:hover,
+//     &:focus,
+//     &:active {
+//       border: $input-border-focus;
+//     }
+
+//     &:focus {
+//       outline: none;
+//     }
+
+//   }
+
+//   // Input - Number
+//   &[type='number'] {
+//     @extend %text-input-extends;
+//     padding: 0;
+
+//     &:hover,
+//     &:focus,
+//     &:active {
+//       border: $input-border-focus;
+//     }
+
+//     &:focus {
+//       outline: none;
+//     }
+//   }
+
+//   // Radio
+//   &[type='radio'] {
+//     @extend %check-input-extends;
+
+//     + label {
+//       @extend %label-extends;
+
+//       &:before {
+//         background-color: $input-border-color;
+//         background-image: $radio-initial;
+//         background-position: 0 0;
+//         background-repeat: no-repeat;
+//         background-size: 15px 15px;
+//         content: '';
+//         display: inline-block;
+//         height: 15px;
+//         margin-right: 10px;
+//         overflow: hidden;
+//         position: relative;
+//         top: 2px;
+//         width: 15px;
+//       }
+
+//       &:focus {
+//         outline: none;
+//       }
+//     }
+
+//     &:hover,
+//     &:focus,
+//     &:active {
+
+//       + label {
+
+//         &:before {
+//           // sass-lint:disable-block no-duplicate-properties
+//           background-color: map-deep-get($cmap-standard, gold-drop-approx);
+//           background-color: var(--secondary-color);
+//         }
+
+//       }
+
+//     }
+
+//     &:checked {
+
+//       + label {
+
+//         &:before {
+//           // sass-lint:disable-block no-duplicate-properties
+//           background-color: map-deep-get($cmap-standard, gold-drop-approx);
+//           background-color: var(--secondary-color);
+//           background-image: $radio-selected;
+//           background-position: 0 0;
+//           background-repeat: no-repeat;
+//           background-size: 15px 15px;
+//         }
+
+//       }
+
+//     }
+
+//   }
+
+
+//   // Checkbox
+//   &[type='checkbox'] {
+//     @extend %check-input-extends;
+
+//     + label {
+//       @extend %label-extends;
+
+//       &:before {
+//         background-color: $input-border-color;
+//         background-image: $checkbox-initial;
+//         background-position: 0 0;
+//         background-repeat: no-repeat;
+//         background-size: 15px 15px;
+//         content: '';
+//         display: inline-block;
+//         height: 15px;
+//         margin-right: 10px;
+//         overflow: hidden;
+//         position: relative;
+//         top: 2px;
+//         width: 15px;
+//       }
+
+//     }
+
+//     &:hover,
+//     &:focus,
+//     &:active {
+
+//       + label {
+
+//         &:before {
+//           // sass-lint:disable-block no-duplicate-properties
+//           background-color: map-deep-get($cmap-standard, gold-drop-approx);
+//           background-color: var(--secondary-color);
+//         }
+//       }
+//     }
+
+//     &:checked {
+//       + label {
+//         &:before {
+//           // sass-lint:disable-block no-duplicate-properties
+//           background-color: map-deep-get($cmap-standard, gold-drop-approx);
+//           background-color: var(--secondary-color);
+//           background-image: $checkbox-selected;
+//           background-position: 0 0;
+//           background-repeat: no-repeat;
+//           background-size: 15px 15px;
+//         }
+
+//       }
+
+//     }
+
+//   }
+
+//   // Submit
+//   &[type='submit'] {
+//     // @extend %button-extends;
+
+//     &:hover,
+//     &:focus,
+//     &:active {
+//       background-color: $button-background-hover;
+//     }
+
+//     &:focus {
+//       outline: none;
+//     }
+
+//     &[disabled] {
+//       background-color: $input-background-color;
+
+//       &:hover,
+//       &:focus,
+//       &:active {
+//         background-color: $input-background-color;
+//       }
+
+//       &:focus {
+//         outline: none;
+//       }
+//     }
+//   }
+
+//   &[type='button'] {
+//     &[disabled] {
+
+//       &:hover,
+//       &:focus,
+//       &:active {
+//         background: $input-background-color;
+//         text-decoration: none;
+//       }
+
+//       &:focus {
+//         outline: none;
+//       }
+
+//     }
+//   }
+// }
+// Select
+select {
+  background-image: $select-arrow;
+  background-position: right center;
+  background-size: 10px 5px;
+  border: 1px solid $input-border-color;
+  border-radius: $select-radius;
+  font-weight: $font-face-light;
+  height: 45px;
+  line-height: 1;
+  margin-bottom: 20px;
+  overflow: hidden;
+  padding: 0 15px;
+  text-indent: 0.001rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border: $input-border-focus;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+}
