@@ -36,7 +36,7 @@
   },
   "logLevel": "info",
   "outputFileSuffixes": {
-    "rendered": ".rendered",
+    "rendered": "",
     "rawTemplate": "",
     "markupOnly": ".markup-only"
   },
