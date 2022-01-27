@@ -1,0 +1,77 @@
+{#
+/**
+ * @file
+ * Theme override to display a single Drupal page while offline.
+ *
+ * All available variables are mirrored in page.html.twig.
+ * Some may be blank but they are provided for consistency.
+ *
+ * @see template_preprocess_maintenance_page()
+ */
+#}
+
+<style>
+.siteHeader {
+  margin-bottom: 20px;
+}
+#maintenance main {
+  height: calc(100vh - 80px - 370px);
+}
+#maintenance .footer-links {
+  margin: 0;
+}
+#maintenance .site-masthead {
+  padding: 15px 0;
+}
+</style>
+<div id="maintenance">
+
+{% block header %}
+<header class="siteHeader " role="banner" >
+  <div class="row columns header-inner-wrapper">
+    <div class="row site-masthead">
+      <div class="columns small-10 medium-3 partner-logo-wrapper">
+        <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home">
+          <img src="{{ logo }}" alt="{{ 'Home'|t }}" loading="lazy" typeof="foaf:Image"
+          style=" height: auto; width: 120px; ">
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+
+<main role="main">
+  <div class="landing-featured-block">
+    <div class="columns features row">
+    <h2>{{vars.title ?: "We’re working on making travel insurance simpler."}}</h2>
+      <div style="min-height: 140px">
+        {{ page.content }}
+      </div>
+    </div>
+  </div>
+</main>
+
+{% block footer %}
+<footer class="site-footer ">
+  <section class="block-cmap-subtheme-covermorefooter row">
+    <section class="footer-legal-links" >
+      {{vars.footer01}}
+
+      {% if vars.footerlink %}
+        <ul class="footer-links">
+          {% for item in vars.footerlink %}
+            <li><a href="{{ item.link|e }}" target="_blank">{{ item.text|e }}</a></li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+
+      <div class="copyright text-align-center" style="clear:both">
+        {{vars.copyright}}
+      </div>
+    </section>
+  </section>
+</footer>
+{% endblock %}
+</div>

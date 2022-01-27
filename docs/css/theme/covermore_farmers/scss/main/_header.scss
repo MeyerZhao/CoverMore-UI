@@ -1,0 +1,158 @@
+.site-masthead {
+  max-height: 72px;
+
+  @media screen and #{breakpoint(small only)} {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  @media screen and #{breakpoint(medium)} {
+    max-height: 80px;
+  }
+
+  @media print {
+    display: block;
+    page-break-inside: avoid;
+    width: 100%;
+  }
+
+
+  &.row {
+    margin: 0;
+  }
+
+  .partner-logo {
+
+    &.columns {
+      height: 48px;
+      line-height: 45px;
+      padding-left: 0;
+
+      img {
+        height: 44px;
+        max-height: 48px;
+        vertical-align: middle;
+
+        @media screen and #{breakpoint(small only)} {
+          max-width: 200px;
+        }
+      }
+
+      a {
+
+        @media print {
+
+          &:after {
+            content: '';
+          }
+
+        }
+
+        &:focus-visible {
+          display: inline-block;
+        }
+
+      }
+
+    }
+
+  }
+
+  .partner-phone {
+    margin: 0;
+    position: relative;
+
+    @media screen and #{breakpoint(medium)} {
+      margin: 14px 0 0;
+      padding-left: 0;
+    }
+
+    a {
+      color: map-deep-get($cmap-standard, mine-shaft-approx);
+      font-size: rem-calc(15);
+      min-width: 124px;
+      position: absolute;
+      right: 0;
+      text-decoration: none;
+
+      @media screen and #{breakpoint(small down)} {
+        max-height: 40px;
+        min-width: 0;
+      }
+
+      @media print {
+        float: right;
+        height: auto;
+        margin-top: -20px;
+        position: static;
+      }
+
+      &:before {
+        background-image: $header-phone;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-size: 29px 29px;
+        content: ' ';
+        display: inline-block;
+        height: 29px;
+        width: 29px;
+
+        @media screen and #{breakpoint(medium)} {
+          background-image: none;
+          border-left: 1px solid map-deep-get($cmap-standard, alto-approx);
+          height: 36px;
+          left: -15px;
+          position: absolute;
+          top: -7px;
+          width: 1px;
+        }
+
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      span {
+        visibility: hidden;
+
+        @media screen and #{breakpoint(medium)} {
+          visibility: visible;
+        }
+
+      }
+
+    }
+
+  }
+
+  .powered-by-header {
+
+    &.columns {
+      height: 48px;
+      position: relative;
+
+      > img {
+        top: 29%;
+      }
+
+      img {
+        height: 44px;
+        position: absolute;
+        right: 0;
+
+        @media screen and #{breakpoint(medium only)} {
+          max-width: 203px;
+        }
+
+        @media screen and #{breakpoint(large up)} {
+          max-width: 255px;
+        }
+
+      }
+
+    }
+
+  }
+
+}

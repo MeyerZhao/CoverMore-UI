@@ -1,0 +1,65 @@
+{{ attach_library('cmap_quote/addons') }}
+
+{% set key = addon.info['#key'] %}
+{% set help_circle %}
+  <svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+      <g transform="translate(-334.000000, -273.000000)">
+        <rect fill="#FFFFFF" x="0" y="0" width="1024" height="1210"></rect>
+        <g transform="translate(129.000000, 184.000000)">
+          <g transform="translate(205.000000, 89.000000)">
+            <circle class="help-link-circle" fill="#BC3B93" fill-rule="nonzero" cx="7.5" cy="7.5" r="7.5"></circle>
+            <text font-family="MuseoSansRounded-700, Museo Sans Rounded" font-size="10" font-weight="500" fill="#FFFFFF">
+              <tspan x="5.655" y="11">?</tspan>
+            </text>
+          </g>
+        </g>
+      </g>
+    </g>
+  </svg>
+{% endset %}
+
+{# Add-On Section #}
+<div class="add-on-item item-{{ key }}">
+
+  {# Content wrapper. #}
+  <div class="content-wrapper">
+
+    {# Add-on name. #}
+    <div class="add-on-item--title">
+      <h3>
+        {{ addon.info['#name'] }}
+        <a href="#help-addons-{{ key }}" aria-label="{{ 'More information'|t }}" class="help">{{ help_circle }}</a>
+      </h3>
+      <div class="AddonSelectedPrice"></div>
+
+      <div id="help-addons-{{ key }}" class="modal">
+        <div class="scrollable-content">
+          {{ addon.info['#helpText']|raw }}
+        </div>
+      </div>
+    </div>
+
+    {# Add-on description. #}
+    <div class="add-on-item--description">
+      {{ addon.info['#description']|raw }}
+    </div>
+
+    {# Add-on option. #}
+    <div class="add-on-item--option">
+      {{ addon.options }}
+    </div>
+
+    {% if addon.suboptions %}
+      {% set hide = '' %}
+      {% if addon.options %}
+        {% set hide = addon.options['#default_value'] ? '' : 'hide'  %}
+      {% endif %}
+      {# Add-on sub-option. #}
+      <div id="{{ key }}-sub-option" class="add-on-item--sub-option {{ key }}-wrapper {{ hide }}">
+        {{ addon.suboptions }}
+      </div>
+    {% endif %}
+  </div>
+
+</div>
