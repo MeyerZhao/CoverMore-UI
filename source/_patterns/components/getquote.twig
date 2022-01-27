@@ -1,4 +1,6 @@
 {# Begin getquote #}
+{% set root = '/CoverMore-UI/patterns' %}
+
 <section class="section section--getquote getquote">
   <div class="grid-container">
     <div class="grid-x grid-margin-x">
@@ -35,14 +37,6 @@
 
                     {% include "@atoms/forms/select-menu.twig" with residence_select %}
 
-
-                    {# <div class="form-group">
-                      <label class="label--getquote">State of Residence
-                      </label>
-                      <select class="radius" required=""/>
-                    </div> #}
-
-
                     <div class="grid-x grid-padding-x--10">
                       <div class="cell small-3">
                         <div class="form-group">
@@ -61,7 +55,7 @@
                           <label class="label--getquote">Add</label>
                           <div class="input__div">
                             <button class="button secondary rounded btn--getquote-add" href="#">
-                              + 99
+                              +
                             </button>
                           </div>
                         </div>
@@ -78,8 +72,11 @@
           <div class="getquote__footer">
             <div class="grid-container">
               <div class="grid-x grid-padding-x">
-                <div class="cell medium-4 large-offset-8">
-                  <button class="button secondary expanded no-margin button--getquote-submit" href="#">Get a Quote</button>
+                <div class="cell medium-4 large-offset-8 medium-offset-8">
+                  {# <a class="button secondary expanded no-margin button--getquote-submit" #}
+                  {# href="{{root}}/templates-theme-farmers-addon-page/templates-theme-farmers-addon-page.html">Get a Quote</a> #}
+                  <a class="button secondary expanded no-margin button--getquote-submit"
+                  href="{{root}}/templates-theme-farmers-planpage/templates-theme-farmers-planpage.html">Get a Quote</a>
                 </div>
               </div>
             </div>

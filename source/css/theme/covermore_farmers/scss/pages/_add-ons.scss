@@ -7,9 +7,9 @@ $error-text-color: get-color(alert);
   h1 {
     font-size: rem-calc(25);
 
-    +.intro-copy {
-      margin-top: 20px;
-    }
+    // +.intro-copy {
+    //   margin-top: 20px;
+    // }
 
   }
 
