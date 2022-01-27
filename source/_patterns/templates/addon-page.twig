@@ -1,0 +1,57 @@
+{% extends "@templates/layouts/page-plan-option.twig" %}
+{% set root = '/CoverMore-UI/patterns' %}
+
+{% block topbar %}
+  {% include "@molecules/blocks/topbar.twig" %}
+{% endblock %}
+
+
+
+{% block main %}
+{#
+<style>
+  .show-outline div {
+    outline: 1px solid #6ed2ff;
+    background: #eaf9ff;
+    padding: 10px;
+}
+</style> #}
+<section class="section section--plan-option show-outline">
+
+  <div class="grid-container">
+    <div class="grid-x grid-margin-x">
+      <div class="cell ">
+          <div class="section__header">
+            <h2 class="section__title title--section-primary">Upgrades</h2>
+            <p class="intro-copy">Based off the product you have selected, we provide a number of options to vary cover. Information for these is provided here. Press the help button[?] for details.</p>
+          </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="grid-container">
+    <div class="grid-x grid-margin-x">
+
+      <div class="cell">
+        {% include "@molecules/blocks/add-on.twig" %}
+      </div>
+      <div class="cell">
+        {% include "@molecules/blocks/add-on.twig" %}
+      </div>
+
+      <div class="cell">
+        <div class="button-well">
+          <a href="/plan-options" class="back-modify" data-drupal-selector="edit-back-modify" id="edit-back-modify">Back &amp; Modify</a>
+
+          <a  href="{{root}}/templates-theme-farmers-traveler-Information/templates-theme-farmers-traveler-Information.html" style="float: right;">
+            <input class="default-form-submit button secondary js-form-submit form-submit" data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op" value="Continue">
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+{% endblock %}

@@ -119,13 +119,6 @@
           ]
         },
         {
-          "id": "components",
-          "recursive": true,
-          "paths": [
-            "source/_patterns/components"
-          ]
-        },
-        {
           "id": "molecules",
           "recursive": true,
           "paths": [
