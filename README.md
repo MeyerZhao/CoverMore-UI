@@ -1,7 +1,36 @@
-please use node 12.
+# README #
 
-## 发布代码
-复制文件夹 public 并重名为 docs 即可。
+This README would normally document whatever steps are necessary to get your application up and running.
+
+### What is this repository for? ###
+use node 12.
+
+* Quick summary
+* Version
+* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+
+### How do I get set up? ###
+
+* Summary of set up
+* Configuration
+* Dependencies
+* Database configuration
+* How to run tests
+* Deployment instructions
+
+### Contribution guidelines ###
+
+* Writing tests
+* Code review
+* Other guidelines
+
+### Who do I talk to? ###
+
+* Repo owner or admin
+* Other community or team contact
+
+## Publish Page
+Just copy the folder public and rename it to docs.
 
 ### Where to modify CSS file import ？
 source/_meta/_head.twig
