@@ -1,6 +1,7 @@
 # README #
 
 This README would normally document whatever steps are necessary to get your application up and running.
+Demo: https://covermore-ui.bitbucket.io/CoverMore-UI
 
 ### What is this repository for? ###
 use node 12.
